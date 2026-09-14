@@ -1,0 +1,31 @@
+{
+  "cue_path": "I:\\Projects\\PSX-Ports-pilot\\_disc\\team-buddies\\Team Buddies (Europe) (En,Es,It).cue",
+  "cue_name": "Team Buddies (Europe) (En,Es,It).cue",
+  "bin_name": "Team Buddies (Europe) (En,Es,It).bin",
+  "track_count": 1,
+  "data_track_size": 717458784,
+  "data_track_md5": "8605d49da65c8306ac92e4b5660eba12",
+  "data_track_sha1": "d9c06591a916da6281fb92eaa3f2c083d5b31a5f",
+  "data_track_crc32": "40ce9451",
+  "boot_exe": "SCES_029.86",
+  "serial": "SCES-02986",
+  "serial_exe": "SCES_029.86",
+  "volume_id": "TEAMBUDDIES",
+  "display_name": "Team Buddies",
+  "load_address": "0x80014DEC",
+  "entry_pc": "0x8001AB6C",
+  "text_size": "0x00024800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "6b8f15dd1d62d0696702cbb103430b7a15333a3f06a53360df9ef9ffb6f04bab",
+  "boot_exe_sha256": "66b98a2799872fc69d2d94163e6938d1371b01d3b353e6fc3d6c6f1768b4f976",
+  "seed_count": 237,
+  "warnings": [
+    "cue has only 1 TRACK \u2014 Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

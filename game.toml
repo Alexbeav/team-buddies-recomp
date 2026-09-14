@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Team Buddies"
+id = "SCES-02986"
+players = 2
+exe = "disc/SCES_029.86"
+disc = "disc/Team Buddies (Europe) (En,Es,It).cue"
+load_address = "0x80014DEC"
+entry_pc = "0x8001AB6C"
+text_size = "0x00024800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Team Buddies (Europe) (En,Es,It).bin"
+cue_name = "Team Buddies (Europe) (En,Es,It).cue"
+boot_exe = "SCES_029.86"
+known_sizes = [717458784]
+known_md5 = [
+  "8605d49da65c8306ac92e4b5660eba12",
+]
+known_sha1 = [
+  "d9c06591a916da6281fb92eaa3f2c083d5b31a5f",
+]
+known_crc32 = [
+  "40ce9451",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+window_title = "Team Buddies Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "6b8f15dd1d62d0696702cbb103430b7a15333a3f06a53360df9ef9ffb6f04bab"
